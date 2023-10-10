@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-padding-top: 2rem;
+   scroll-behavior: smooth;
+   list-style: none;
+   text-decoration: none;
+   font-family: 'Croissant One', cursive;
+}
+:root{
+     --main-color: #0687ff;
+     --second-color: #f3ecec;
+     --text-color: #ffffff;
+     --gradient: linear-gradient(#5805ff,#3002ff );
+}
+html::-webkit-scrollbar{
+   width: 0.5rem; 
+}
+html::-webkit-scrollbar-track{ 
+    background: transparent;
+}  
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+} 
+section{
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #025915;
+    padding: 15px 100px; 
+}
+.logo img{
+    width: 40px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+}
+.navbar a::after {
+    content:"";
+    width: 0;
+    height: 3px;
+    background:#3d34e3;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+
+}
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500; 
+}
+.header-btn.sign-in{
+    background: #3d34e3;
+    color: #06c8f46b;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover { 
+    background: var(--main-color);
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background:url(../img/Car\ Website\ –\ 1@2x.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.texto h1{
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+.texto span{
+    color: rgb(4, 18, 124)
+}
+.texto p{
+    font-size: large;
+    margin: 0.5rem 0 1rem;
+    color: #266be2;
+}
+.aplicativos-stores {
+    display: flex;
+    margin: 100px;
+}
+.aplicativos-stores img{
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+} 
+
+.form-container form{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    position: center;
+    bottom: -18rem;
+    left: 100px;
+    background: #0307fe;
+    padding: 20px;
+    border-radius: 0.5rem;
+    font-size: 20px;
+}
+.input-box{
+    width: 100%;
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span{
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f8f8f8;
+}
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #0153f6;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.form-container form .btn{
+    
+    flex: 1  1 7rem;
+    padding: 10px 34px;
+    border: none;
+    border-radius: 1.5rem;
+    color: #fdfdfd;
+    text-align: center;
+    background: #f30505;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.form-container form .btn:hover{
+    background: rgb(4, 232, 95);
+} 
+.heading{
+    
+    text-align: center;
+}
+.heading span{
+   
+    font-weight: 500;
+    text-decoration: uppercase;
+}
+.heading h1{
+    
+    font-size: 2rem;
+}
+.ride-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.ride-container .box{
+    text-align: center;
+    padding: 20px;
+}
+.ride-container .box .bx{
+    font-size: 32px;
+    padding: 10px;
+    background: #022d376b;
+    border-radius: 0.6rem;
+    color: rgb(1, 31, 163);
+}
+.ride-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+.ride-container .box .bx:hover, .ride-container .bx .bxs-calendar-star{
+    background: rosybrown;
+    color: #f30505;
+}
+.servicos-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.servicos-container .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgb(21, 0, 250);
+    background: #d9ff00;
+
+}
+.servicos-container .box .box-img{
+    width: 100%;
+    height: 200px;
+
+}
+.servicos-container .box  .box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+
+}
+.servicos-container .box p{
+    padding:  0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem  0 1rem;
+
+}
+.servicos-container .box h3{
+    font-weight: 500;
+    text-align: center;
+
+}
+.servicos-container .box h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #060809;
+    margin:0.2rem 0 0.5rem;
+    
+}
+  
+.servicos-container .box h2 span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255, 45, 3);
+    
+}
+.servicos-container .box .btn{
+    display: flex;
+    justify-content: center;
+    background: coral;
+    color: #0d0700;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+.servicos-container .box .btn:hover{
+    background: rgb(7, 119, 193);
+
+}
+.sobre-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+     
+}
+.texto-img img{
+    width: 100%;
+
+}
+.texto-texto span{
+    font-weight: 500;
+    color: rgb(41, 253, 13);
+    text-transform: uppercase ;
+}
+.sobre-texto p{
+    margin: 0.5rem 0 1.4rem;
+}
+.sobre-texto .btn{
+    padding: 10px 20px;
+    background: #05befc;
+    color: #46584a;
+    border-radius: 0.5rem;
+
+}
+.sobre-texto .btn:hover{
+    background-color: rgb(15, 29, 29);
+}
+.revisao-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+.revisao-img{
+    width: 70px;
+    height: 70px;
+}
+.revisao-img img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border:  2px saddlebrown;
+}
+.revisao-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 2px 4px crimson;
+    border-radius: 0.5rem;
+}
+.revisao-container .box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+.revisao-container .box p{
+    font-style: italic;
+}
+.revisao-container .box .estrela .bx{
+    color: rgb(223, 67, 0);
+}
+.boletim{
+    background: linear-gradient(orange, blue);
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+.boletim h2{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.boletim .box{
+    margin-top: 0.1rem;
+    background: rgba(238, 254, 8, 0.629);
+    border-radius: 0.6rem;
+    padding: 4px 8px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.boletim .box input{
+    border: none;
+    outline: none;
+}
+.boleton .box .btn{
+    background: #4b43bc;
+    color:#075454;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+.Rodape{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(246, 34, 34);
+
+}
+.social{
+    color: #322e67;
+    padding: 10px;
+    font-size: 21px;
+
+}
+/*Site responsivo*/
+@media(max-width: 991px){
+    header{
+        padding: 18px 48px;
+    }
+    .section{
+        padding: 50px 40px;
+    }
+}  
+@media(max-width: 991px){
+    .sobre{
+        background-position: left;
+    }
+    .form-container form{
+        bottom: 0.2rem;
+        left: 40px;
+    }
+} 
+@media(max-width: 768px){
+    header{
+        padding: 11px 40px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .sign-up{
+        display: none;
+
+    }
+    .texto h1{
+        font-size: 2.5rem;
+    }
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .form-container form{
+        position: unset;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #075454;
+        box-shadow: 0 4px  4px rgba(238, 254, 8, 0.629);
+        transition: 0.2s ease;
+        text-align: left; 
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding:  1rem;
+        border-left: 2px solid  blue;
+        margin: 1rem;
+        display: block;  
+    }
+    .navbar a:hover{
+        color: #05befc;
+        background:  greenyellow;
+        border: none;
+    }
+    .navbar a ::after {
+        display: none;
+    } 
+    .heading span{
+        font-size: 0.5rem;
+        font-weight: 600;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .sobre-container{
+      grid-template-columns: 1fr;
+      text-align: center;
+    } 
+    .texto-img{
+        padding: 1rem;
+        order: 2;
+    } 
+}
+@media (max-width: 563px){
+    .rodape{
+        flex-direction: column; 
+    }
+    .rodape .bxo{
+        width: 284px;
+    }
+    .form-container{
+        padding-top: 2rem;
+    }
+}
+@media (max-width: 350px){
+    header{
+        padding: 6px 14px;
+    }
+    .logo img{
+        width: 30px;
+    }    
+    section{
+        padding: 50px 14px;
+    }
+    .header-btn.sign-in {
+        padding: 7px 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .texto h1 {
+        font-size: 2rem;
+    }
+    .form-container{
+        padding: 2rem;
+    }
+    .servicos-container{
+        grid-template-columns: repeat(auto-fit, minmax(254px, auto));
+    }
+}
